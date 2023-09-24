@@ -32,7 +32,7 @@
 
 5. После старта приложения вы увидите результат его работы
  ```
-mcrs      | 2023-09-24 15:28:34.278  INFO 1 --- [           main] ru.dolya.mcrs_test.McrsTestApplication   : Started McrsTestApplication in 5.418 seconds (JVM running for 5.878)
+mcrs      | 2023-09-24 15:28:34.278  INFO 1 --- [           main] ru.dolya.mcrs_test.CcrsoTestApplication   : Started McrsTestApplication in 5.418 seconds (JVM running for 5.878)
 mcrs      | 2023-09-24 15:28:35.166  INFO 1 --- [   scheduling-1] r.d.m.service.impl.WeatherServiceImpl    : Weather have been saved to DB. City: Saratov, Temp: 20.52, Description: clear sky
 mcrs      | 2023-09-24 15:28:35.253  INFO 1 --- [   scheduling-1] r.d.m.service.impl.WeatherServiceImpl    : Weather have been saved to DB. City: Moscow, Temp: 22.54, Description: scattered clouds
  ```

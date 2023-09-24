@@ -1,9 +1,9 @@
 version: "3.9"
 services:
 
-  mcrs:
+  ccrso:
     build: ./
-    container_name: mcrs
+    container_name: ccrso
     ports:
       - "8080:8080"
     environment:

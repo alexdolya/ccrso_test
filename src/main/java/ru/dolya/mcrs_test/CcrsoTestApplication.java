@@ -8,10 +8,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 @EnableScheduling
 @EnableFeignClients
-public class McrsTestApplication {
+public class CcrsoTestApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(McrsTestApplication.class, args);
+        SpringApplication.run(CcrsoTestApplication.class, args);
     }
 
 }
