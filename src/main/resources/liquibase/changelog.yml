@@ -1,0 +1,57 @@
+databaseChangeLog:
+  - changeSet:
+      id: createTables
+      author: alexdolya
+      changes:
+        - createTable:
+            tableName: city
+            columns:
+              - column:
+                  name: city_id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: city
+                  type: VARCHAR(255)
+        - createTable:
+            tableName: weather
+            columns:
+              - column:
+                  name: weather_id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: city_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: temp
+                  type: DOUBLE
+              - column:
+                  name: description
+                  type: VARCHAR(255)
+              - column:
+                  name: wind_speed
+                  type: DOUBLE
+              - column:
+                  name: wind_deg
+                  type: INT
+              - column:
+                  name: clouds
+                  type: INT
+              - column:
+                  name: pressure
+                  type: INT
+              - column:
+                  name: humidity
+                  type: INT
+              - column:
+                  name: date_time
+                  type: TIMESTAMP

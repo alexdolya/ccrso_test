@@ -1,0 +1,38 @@
+version: "3.9"
+services:
+
+  mcrs:
+    build: ./
+    container_name: mcrs
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/weather
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+      CITIESLIST_PATH: /app/cities.txt
+      OPENWEATHERMAP_APPID: 49b28726d21ec427cabf807aa7b39fe7
+    volumes:
+      - ./src/main/resources/cities.txt:/app/cities.txt
+    depends_on:
+      - db
+    networks:
+      - default
+
+  db:
+    image: postgres:16
+    restart: always
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: weather
+    ports:
+      - "5432:5432"
+    volumes:
+    - .:/var/lib/postgresql
+    networks:
+      - default
+
+networks:
+  default: null
