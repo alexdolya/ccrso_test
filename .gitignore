@@ -1,6 +1,9 @@
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Исключить все файлы и папки из папки target
+/target/*
+
+# Включить только файлы .jar из папки target
+!/target/*.jar
 
 ### STS ###
 .apt_generated

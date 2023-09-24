@@ -11,9 +11,9 @@ services:
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: postgres
       CITIESLIST_PATH: /app/cities.txt
-      OPENWEATHERMAP_APPID: 49b28726d21ec427cabf807aa7b39fe7
+      OPENWEATHERMAP_APPID: ${APPID}
     volumes:
-      - ./src/main/resources/cities.txt:/app/cities.txt
+      - ${CITIESLIST_PATH}:/app/cities.txt
     depends_on:
       - db
     networks:
@@ -30,7 +30,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-    - .:/var/lib/postgresql
+    - ${DB_DATA_PATH}:/var/lib/postgresql
     networks:
       - default
 

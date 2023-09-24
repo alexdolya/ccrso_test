@@ -12,8 +12,8 @@ spring:
     change-log: liquibase/changelog.yml
     enabled: true
 
-#server:
-#  port: 8080
+server:
+  port: 8080
 citieslist:
   path: src/main/resources/cities.txt
 openweathermap:
